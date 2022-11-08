@@ -7,7 +7,9 @@ class Character:
     
    # Объявляем метод атаки
     def attack(self):
-        ...
+        # Описываем метод атаки.
+        return (f'{self.name} нанёс противнику урон, равный '
+                f'{5 + randint(5, 10)}')
     
     # Объявляем метод защиты.
     def defence(self):
