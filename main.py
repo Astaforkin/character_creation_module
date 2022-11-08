@@ -1,5 +1,7 @@
 from random import randint
 
+DEFAULT_ATTACK = 5
+
 class Character:
     # Константа для диапазона очков урона.
     RANGE_VALUE_ATTACK = (1, 3)
@@ -12,7 +14,7 @@ class Character:
         # Описываем метод атаки.
         # Вместо диапазона записана переменная класса.
         # Оператор * распаковывает передаваемый кортеж.
-        value_attack = 5 + randint(*self.RANGE_VALUE_ATTACK)
+        value_attack = DEFAULT_ATTACK + randint(*self.RANGE_VALUE_ATTACK)
         return (f'{self.name} нанёс противнику урон, равный {value_attack}')
     
     # Объявляем метод защиты.
